@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './Components/Header';
 import Previewcards from './Components/Previewcards';
-import { Form, Button, Row, Col, Container } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 class App extends Component {
   render() {
     return (
