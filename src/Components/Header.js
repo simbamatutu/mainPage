@@ -1,29 +1,28 @@
 import React from 'react';
-import { Image, Row, Col } from 'react-bootstrap';
+import { Image, Row, Col, Container } from 'react-bootstrap';
 
 const Header = () => {
   return (
-    <div
+    <Container
       style={{
         color: 'white',
-        backgroundColor: '#2a2d2e',
+
         display: 'flex',
-        flexDirection: 'column',
-        alignContent: 'center',
+        padding: '1ch',
+        justifyContent: 'center',
       }}
       className='header cards'
     >
-      <Col xs={6} md={4}>
+      <Col>
         <Row>
           <Image
             src='bigdata.png'
-            roundedCircle
             style={{
+              height: '5rem',
+              marginTop: '2ch',
+              width: '5rem',
               margin: 'auto',
-              height: '15vmin',
-              width: '15vmin',
-              paddingTop: '3ch',
-              display: 'block',
+              borderRadius: '50%',
             }}
           />
         </Row>
@@ -34,6 +33,7 @@ const Header = () => {
               fontSize: '1em',
               fontWeight: '100',
               textAlign: 'center',
+              margin: 'auto',
               padding: '10px',
             }}
           >
@@ -43,11 +43,12 @@ const Header = () => {
         <Row>
           <p
             style={{
-              borderTop: 'solid 1px #dcdcdc',
-              borderBottom: 'solid 1px #fff',
+              borderTop: 'solid 0.3px #dcdcdc',
+              borderBottom: 'solid 0.3px #dcdcdc',
               textAlign: 'center',
               padding: '1ch',
-              fontSize: '3vmin',
+              fontSize: '2vmin',
+              margin: 'auto',
             }}
           >
             United forever in friendship and labour
@@ -58,7 +59,9 @@ const Header = () => {
             style={{
               textAlign: 'center',
               padding: '2ch',
-              fontSize: 'calc(10px + 1vmin)',
+
+              fontSize: '3vmin',
+              margin: 'auto',
             }}
           >
             I code with{' '}
@@ -75,30 +78,31 @@ const Header = () => {
         </Row>
         <Row
           style={{
-            padding: '1ch',
+            padding: '2ch',
+            margin: 'auto',
           }}
         >
-          <Row
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-            }}
-          >
-            <span className='iconBg' style={{ color: 'red' }}>
-              <i className='fas fa-camera' />
-            </span>
-            <span className='iconBg' style={{ color: 'red' }}>
-              <i className='fas fa-camera' />
-            </span>
-            <span className='iconBg' style={{ color: 'red' }}>
-              <i className='fas fa-camera' />
-            </span>
-            <span className='iconBg'></span>
-            <span className='iconBg'>dd</span>
-          </Row>
+          <span className='iconBg'>
+            <i className='fas fa-camera' />
+          </span>
+          <span className='iconBg'>
+            <i className='fas fa-camera' />
+          </span>
+          <span className='iconBg'>
+            <i className='fas fa-camera' />
+          </span>
+          <span className='iconBg'>
+            <i className='fas fa-camera' />
+          </span>
+          <span className='iconBg'>
+            <i className='fas fa-camera' />
+          </span>
+          <span className='iconBg'>
+            <i className='fas fa-camera' />
+          </span>
         </Row>
       </Col>
-    </div>
+    </Container>
   );
 };
 

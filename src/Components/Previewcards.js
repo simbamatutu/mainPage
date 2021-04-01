@@ -5,23 +5,23 @@ const Previewcards = () => {
     <Container
       style={{
         color: 'white',
-        backgroundColor: '#2a2d2e',
+
         padding: '1ch',
         marginTop: '1ch',
       }}
-      className='p-3'
+      className='p-3 cards'
     >
       <Row>
-        <Col
-          style={{ display: 'inline-flex', textAlign: 'left', width: '70%' }}
-        >
-          <h5>{`Closed Error page`}</h5>
+        <Col style={{ width: '70%' }}>
           <Row>
-            <p>Description</p>
+            <h5>Project_title</h5>
+          </Row>
+          <Row>
+            <p>Project_brief_description</p>
           </Row>
         </Col>
-        <Col style={{ display: 'inline-flex', justifyContent: 'right' }}>
-          2 of 3
+        <Col className='text-right' style={{ color: 'grey' }}>
+          Language % 6
         </Col>
       </Row>
     </Container>

@@ -2,6 +2,7 @@
   font-family: 'Poppins', sans-serif;
   padding: 0;
   margin: 0;
+  background-color: #101427;
 }
 
 .cards {
@@ -12,22 +13,20 @@
     0 100px 80px rgba(0, 0, 0, 0.12);
 }
 .App {
-  position: fixed;
-  top: 50%;
+  display: flex;
+  flex-direction: column;
   margin: auto;
-  padding: 3ch;
-  width: auto;
-  left: 50%;
-  /* bring your own prefixes */
-  transform: translate(-50%, -50%);
+  background-color: '#2a2d2e';
+  width: 80vw;
+  height: 60vh;
 }
 
 .iconBg {
   background-color: #101427;
-  width: 5vmin;
-  color: #fff !important;
+  width: 5ch;
+  color: #fff;
   border-radius: 3px;
   padding: 1ch;
-  margin-left: 3ch;
-  height: 5vmin;
+  margin-left: 1ch;
+  height: 5ch;
 }
