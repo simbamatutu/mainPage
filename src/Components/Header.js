@@ -12,176 +12,246 @@ import {
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons';
 
-var language = 'ss';
-const Header = () => {
-  const setLanguage = () => {
-    const Languages = [
-      'React',
-      'JavaScript',
-      'HTML',
-      'CSS',
-      'C',
-      'Python',
-      'C#',
-    ];
-    var i = 0;
+class Header extends React.Component {
+  componentDidMount() {
+    var slideIndex = 0;
+    carousel();
 
-    var intv = setInterval(function () {
-      if (i >= Languages.length) {
-        clearInterval(intv);
-      } else {
-        console.log(Languages[i]);
-        language = Languages[i];
+    function carousel() {
+      var items = [];
+      var rawListItems = document
+        .getElementsByClassName('bio')[0]
+        .getElementsByClassName('grid-item');
+      for (var i = 0; i < rawListItems.length; i++) {
+        rawListItems[i].style = 'display: none;';
+      }
+      slideIndex++;
+      if (slideIndex > rawListItems.length || slideIndex === 1) {
+        slideIndex = 2;
+      }
+      rawListItems[slideIndex - 1].style.display = 'block';
+      setTimeout(carousel, 2000);
+    }
+  }
+  render() {
+    return (
+      <Container
+        style={{
+          color: 'white',
+          backgroundColor: '#2a2d2e',
+          display: 'flex',
+          padding: '1ch',
+          justifyContent: 'center',
+        }}
+      >
+        <Col>
+          <Row>
+            <Image
+              src='resources/self.jpg'
+              style={{
+                height: '5rem',
+                marginTop: '2ch',
+                width: '5rem',
+                margin: 'auto',
+                borderRadius: '50%',
+              }}
+            />
+          </Row>
+          <Row>
+            <h4
+              className='name'
+              style={{
+                fontSize: '1em',
+                fontWeight: '100',
+                textAlign: 'center',
+                margin: 'auto',
+                padding: '10px',
+              }}
+            >
+              Simba Matutu
+            </h4>
+          </Row>
+          <Row>
+            <p
+              style={{
+                borderTop: 'inset 0.8px #101427',
+                borderBottom: 'inset 0.8px #101427',
+                textAlign: 'center',
+                padding: '1ch',
+                fontSize: '1em',
+                margin: 'auto',
+              }}
+            >
+              United forever in friendship and labour
+            </p>
+          </Row>
 
-        ++i;
-      }
-      if (i === Languages.length) {
-        i = 0;
-      }
-    }, 3000);
-  };
-  setLanguage();
-  return (
-    <Container
-      style={{
-        color: 'white',
-        backgroundColor: '#2a2d2e',
-        display: 'flex',
-        padding: '1ch',
-        justifyContent: 'center',
-      }}
-    >
-      <Col>
-        <Row>
-          <Image
-            src='resources/self.jpg'
-            style={{
-              height: '5rem',
-              marginTop: '2ch',
-              width: '5rem',
-              margin: 'auto',
-              borderRadius: '50%',
-            }}
-          />
-        </Row>
-        <Row>
-          <h4
-            className='name'
-            style={{
-              fontSize: '1em',
-              fontWeight: '100',
-              textAlign: 'center',
-              margin: 'auto',
-              padding: '10px',
-            }}
+          <Row
+            className='bio p-2'
+            style={{ display: 'flex', justifyContent: 'center' }}
           >
-            Simba Matutu
-          </h4>
-        </Row>
-        <Row>
-          <p
+            <span>
+              <p
+                style={{
+                  fontSize: '1.3em',
+                }}
+              >
+                I code with
+              </p>
+            </span>
+            <span className='grid-item'>
+              <p className='m-0'>NodeJs</p>
+            </span>
+            <span className='grid-item'>
+              <p
+                style={{
+                  marginBottom: '0rem',
+                  padding: '0 0.5em 0 0.3em',
+                }}
+              >
+                React
+              </p>
+            </span>
+            <span className='grid-item'>
+              <p
+                style={{
+                  marginBottom: '0rem',
+                  padding: '0 0.5em 0 0.3em',
+                }}
+              >
+                C
+              </p>
+            </span>
+            <span className='grid-item'>
+              <p
+                style={{
+                  marginBottom: '0rem',
+                  padding: '0 0.5em 0 0.3em',
+                }}
+              >
+                C#
+              </p>
+            </span>
+            <span className='grid-item'>
+              <p
+                style={{
+                  marginBottom: '0rem',
+                  padding: '0 0.5em 0 0.3em',
+                }}
+              >
+                Python
+              </p>
+            </span>
+            <span className='grid-item'>
+              <p
+                style={{
+                  marginBottom: '0rem',
+                  padding: '0 0.5em 0 0.3em',
+                }}
+              >
+                MongoDB
+              </p>
+            </span>
+            <span className='grid-item'>
+              <p
+                style={{
+                  marginBottom: '0rem',
+                  padding: '0 0.5em 0 0.3em',
+                }}
+              >
+                HTML5
+              </p>
+            </span>
+            <span className='grid-item'>
+              <p
+                style={{
+                  marginBottom: '0rem',
+                  padding: '0 0.5em 0 0.3em',
+                }}
+              >
+                CSS
+              </p>
+            </span>
+          </Row>
+
+          <Row
             style={{
-              borderTop: 'inset 0.8px #101427',
-              borderBottom: 'inset 0.8px #101427',
-              textAlign: 'center',
-              padding: '1ch',
-              fontSize: '2vmin',
-              margin: 'auto',
-            }}
-          >
-            United forever in friendship and labour
-          </p>
-        </Row>
-        <Row>
-          <p
-            style={{
-              textAlign: 'center',
               padding: '2ch',
 
-              fontSize: '3vmin',
-              margin: 'auto',
+              display: 'flex',
+              justifyContent: 'space-between',
             }}
           >
-            I code with <Form.Control type='text' value={language} readOnly />
-          </p>
-        </Row>
-        <Row
-          style={{
-            padding: '2ch',
-            margin: 'auto',
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
-          <span className='iconBg'>
-            <FontAwesomeIcon
-              style={{
-                fontSize: '3ch',
-              }}
-              icon={faGithub}
-            />
-          </span>
-          <span className='iconBg'>
-            <FontAwesomeIcon
-              style={{
-                fontSize: '3ch',
-              }}
-              icon={faStackOverflow}
-            />
-          </span>
-          <span className='iconBg'>
-            <FontAwesomeIcon
-              style={{
-                fontSize: '3ch',
-              }}
-              icon={faLinkedin}
-            />
-          </span>
+            <span className='iconBg'>
+              <FontAwesomeIcon
+                style={{
+                  fontSize: '3ch',
+                }}
+                icon={faGithub}
+              />
+            </span>
+            <span className='iconBg'>
+              <FontAwesomeIcon
+                style={{
+                  fontSize: '3ch',
+                }}
+                icon={faStackOverflow}
+              />
+            </span>
+            <span className='iconBg'>
+              <FontAwesomeIcon
+                style={{
+                  fontSize: '3ch',
+                }}
+                icon={faLinkedin}
+              />
+            </span>
 
-          <span className='iconBg'>
-            <FontAwesomeIcon
-              style={{
-                fontSize: '3ch',
-              }}
-              icon={faSlack}
-            />
-          </span>
-          <span className='iconBg'>
-            <FontAwesomeIcon
-              style={{
-                fontSize: '3ch',
-              }}
-              icon={faDiscord}
-            />
-          </span>
-          <span className='iconBg'>
-            <FontAwesomeIcon
-              style={{
-                fontSize: '3ch',
-              }}
-              icon={faWhatsapp}
-            />
-          </span>
-          <span className='iconBg'>
-            <FontAwesomeIcon
-              style={{
-                fontSize: '3ch',
-              }}
-              icon={faInstagram}
-            />
-          </span>
-          <span className='iconBg'>
-            <FontAwesomeIcon
-              style={{
-                fontSize: '3ch',
-              }}
-              icon={faTwitter}
-            />
-          </span>
-        </Row>
-      </Col>
-    </Container>
-  );
-};
+            <span className='iconBg'>
+              <FontAwesomeIcon
+                style={{
+                  fontSize: '3ch',
+                }}
+                icon={faSlack}
+              />
+            </span>
+            <span className='iconBg'>
+              <FontAwesomeIcon
+                style={{
+                  fontSize: '3ch',
+                }}
+                icon={faDiscord}
+              />
+            </span>
+            <span className='iconBg'>
+              <FontAwesomeIcon
+                style={{
+                  fontSize: '3ch',
+                }}
+                icon={faWhatsapp}
+              />
+            </span>
+            <span className='iconBg'>
+              <FontAwesomeIcon
+                style={{
+                  fontSize: '3ch',
+                }}
+                icon={faInstagram}
+              />
+            </span>
+            <span className='iconBg'>
+              <FontAwesomeIcon
+                style={{
+                  fontSize: '3ch',
+                }}
+                icon={faTwitter}
+              />
+            </span>
+          </Row>
+        </Col>
+      </Container>
+    );
+  }
+}
 
 export default Header;

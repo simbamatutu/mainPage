@@ -14,7 +14,6 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-
   width: 70vw;
   height: 50vh;
 }
@@ -28,5 +27,21 @@
 
   border-radius: 3px;
   padding: 10px;
+}
+
+.grid-item {
+  background-color: #101427;
+  border: 0.1em ridge #101427;
+  margin: auto;
+  margin-right: 0;
+  font-size: 1.3em;
   margin-left: 1ch;
+  margin-top: 0ch;
+}
+@media (max-width: 600px) {
+  .iconBg {
+    background-color: #101427;
+    font-size: 0.7em;
+    padding: 0.6em;
+  }
 }
