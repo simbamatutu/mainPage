@@ -2,11 +2,9 @@
   font-family: 'Poppins', sans-serif;
   padding: 0;
   margin: 0;
-  background-color: #101427;
 }
 
 .cards {
-  border-radius: 3px;
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
@@ -16,17 +14,19 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  background-color: '#2a2d2e';
+
   width: 70vw;
   height: 50vh;
 }
 
 .iconBg {
   background-color: #101427;
-  width: 5ch;
   color: #fff;
+  display: flex;
+
+  place-items: center;
+
   border-radius: 3px;
-  padding: 1ch;
+  padding: 10px;
   margin-left: 1ch;
-  height: 5ch;
 }

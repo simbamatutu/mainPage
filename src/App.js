@@ -9,8 +9,6 @@ class App extends Component {
       <React.Fragment className='App'>
         <Header />
         <Previewcards />
-        <Previewcards />
-        <Previewcards />
       </React.Fragment>
     );
   }

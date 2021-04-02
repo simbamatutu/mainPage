@@ -1,28 +1,17 @@
 import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
+import projects from '../Projects';
+import Project from './Project';
+
 const Previewcards = () => {
   return (
-    <Container
-      style={{
-        color: 'white',
-
-        padding: '1ch',
-        marginTop: '1ch',
-      }}
-      className='p-3 cards'
-    >
+    <Container>
       <Row>
-        <Col style={{ width: '70%' }}>
-          <Row>
-            <h5>Project_title</h5>
-          </Row>
-          <Row>
-            <p>Project_brief_description</p>
-          </Row>
-        </Col>
-        <Col className='text-right' style={{ color: 'grey' }}>
-          Language % 6
-        </Col>
+        {projects.map((project) => (
+          <Col sm={12} md={12} lg={12} className='p-0'>
+            <Project project={project} />
+          </Col>
+        ))}
       </Row>
     </Container>
   );

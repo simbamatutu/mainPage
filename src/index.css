@@ -4,6 +4,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  background-color: #101427;
+  height: 100%;
+  padding: 8vh 3vw 4vh 3vw;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
