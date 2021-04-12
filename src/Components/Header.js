@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Row, Col, Container, Form } from 'react-bootstrap';
+import { Image, Row, Col, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
@@ -18,7 +18,7 @@ class Header extends React.Component {
     carousel();
 
     function carousel() {
-      var items = [];
+      //var items = [];
       var rawListItems = document
         .getElementsByClassName('bio')[0]
         .getElementsByClassName('grid-item');

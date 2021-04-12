@@ -18,7 +18,7 @@ a .anchor:hover {
   flex-direction: column;
   margin: auto;
   width: 70vw;
-  height: 50vh;
+  height: 100%;
 }
 
 .iconBg {
