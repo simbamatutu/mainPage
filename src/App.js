@@ -7,7 +7,7 @@ import Previewcards from './Components/Previewcards';
 class App extends Component {
   render() {
     return (
-      <Container className='App'>
+      <Container className='App' style={{ padding: '1ch' }}>
         <Header />
         <Previewcards />
       </Container>
