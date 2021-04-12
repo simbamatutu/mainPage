@@ -16,7 +16,7 @@ a .anchor:hover {
 .App {
   display: flex;
   flex-direction: column;
-  margin: auto;
+
   width: 70vw;
   height: 100%;
 }
