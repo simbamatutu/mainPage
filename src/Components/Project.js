@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, Row } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 const Project = ({ project }) => {
@@ -17,7 +18,14 @@ const Project = ({ project }) => {
       >
         <Card.Title as='div'>
           <Card.Text as='span' className='float-left'>
-            {project.name}
+            <a
+              href={project.link}
+              target='_blank'
+              rel='noreferrer'
+              className='anchor'
+            >
+              {project.name}
+            </a>
           </Card.Text>
           <Card.Text
             as='span'
