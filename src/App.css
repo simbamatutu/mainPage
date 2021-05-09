@@ -3,10 +3,7 @@
   padding: 0;
   margin: 0;
 }
-a .anchor:hover {
-  text-decoration: none;
-  font-size: larger;
-}
+
 .cards {
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -48,6 +45,12 @@ a .anchor:hover {
     padding: 0.6em;
   }
 }
+
+.anchor:hover {
+  color: rgb(93, 100, 117);
+  text-decoration: none;
+}
+
 .anchor {
   color: #fff;
 }

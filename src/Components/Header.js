@@ -182,31 +182,50 @@ class Header extends React.Component {
               justifyContent: 'space-between',
             }}
           >
-            <span className='iconBg'>
-              <FontAwesomeIcon
-                style={{
-                  fontSize: '3ch',
-                }}
-                icon={faGithub}
-              />
-            </span>
-            <span className='iconBg'>
-              <FontAwesomeIcon
-                style={{
-                  fontSize: '3ch',
-                }}
-                icon={faStackOverflow}
-              />
-            </span>
-            <span className='iconBg'>
-              <FontAwesomeIcon
-                style={{
-                  fontSize: '3ch',
-                }}
-                icon={faLinkedin}
-              />
-            </span>
+            <a
+              href='https://github.com/simbamatutu'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <span className='iconBg'>
+                <FontAwesomeIcon
+                  style={{
+                    fontSize: '3ch',
+                  }}
+                  icon={faGithub}
+                />
+              </span>
+            </a>
 
+            <a
+              href='https://stackoverflow.com/users/11139373/simba'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <span className='iconBg'>
+                <FontAwesomeIcon
+                  style={{
+                    fontSize: '3ch',
+                  }}
+                  icon={faStackOverflow}
+                />
+              </span>
+            </a>
+
+            <a
+              href='https://www.linkedin.com/in/simbamatutu/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <span className='iconBg'>
+                <FontAwesomeIcon
+                  style={{
+                    fontSize: '3ch',
+                  }}
+                  icon={faLinkedin}
+                />
+              </span>
+            </a>
             <span className='iconBg'>
               <FontAwesomeIcon
                 style={{
@@ -231,14 +250,21 @@ class Header extends React.Component {
                 icon={faWhatsapp}
               />
             </span>
-            <span className='iconBg'>
-              <FontAwesomeIcon
-                style={{
-                  fontSize: '3ch',
-                }}
-                icon={faInstagram}
-              />
-            </span>
+
+            <a
+              href='https://www.instagram.com/simbamatutu'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <span className='iconBg'>
+                <FontAwesomeIcon
+                  style={{
+                    fontSize: '3ch',
+                  }}
+                  icon={faInstagram}
+                />
+              </span>
+            </a>
             <span className='iconBg'>
               <FontAwesomeIcon
                 style={{
