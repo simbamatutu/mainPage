@@ -7,8 +7,8 @@ const Previewcards = () => {
   return (
     <Container>
       <Row>
-        {projects.map((project) => (
-          <Col sm={12} md={12} lg={12} className='p-0'>
+        {projects.map((project, i) => (
+          <Col sm={12} md={12} lg={12} className='p-0' key={i}>
             <Project project={project} />
           </Col>
         ))}

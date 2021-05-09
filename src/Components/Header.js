@@ -18,7 +18,10 @@ class Header extends React.Component {
     carousel();
 
     function carousel() {
+ 
+   
       // var items = [];
+ 
       var rawListItems = document
         .getElementsByClassName('bio')[0]
         .getElementsByClassName('grid-item');
