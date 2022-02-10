@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Row, Col, Container, Form } from 'react-bootstrap';
+import { Image, Row, Col, Container } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
@@ -18,7 +18,6 @@ class Header extends React.Component {
     carousel();
 
     function carousel() {
-      var items = [];
       var rawListItems = document
         .getElementsByClassName('bio')[0]
         .getElementsByClassName('grid-item');
@@ -70,20 +69,6 @@ class Header extends React.Component {
             >
               Simba Matutu
             </h4>
-          </Row>
-          <Row>
-            <p
-              style={{
-                borderTop: 'inset 0.8px #101427',
-                borderBottom: 'inset 0.8px #101427',
-                textAlign: 'center',
-                padding: '1ch',
-                fontSize: '1em',
-                margin: 'auto',
-              }}
-            >
-              United forever in friendship and labour
-            </p>
           </Row>
 
           <Row

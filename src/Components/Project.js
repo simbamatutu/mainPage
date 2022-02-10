@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Row } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 const Project = ({ project }) => {
