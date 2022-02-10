@@ -17,7 +17,14 @@ const Project = ({ project }) => {
       >
         <Card.Title as='div'>
           <Card.Text as='span' className='float-left'>
-            {project.name}
+            <a
+              href={project.link}
+              target='_blank'
+              rel='noreferrer'
+              className='anchor'
+            >
+              {project.name}
+            </a>
           </Card.Text>
           <Card.Text
             as='span'

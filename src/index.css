@@ -18,6 +18,13 @@ code {
   #root {
     background-color: #101427;
     height: 100%;
+    padding: 5vh 0vw 4vh 0vw;
+  }
+}
+@media (min-width: 600px) {
+  #root {
+    background-color: #101427;
+    height: 100%;
     padding: 8vh 3vw 4vh 3vw;
   }
 }
