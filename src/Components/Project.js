@@ -15,36 +15,43 @@ const Project = ({ project }) => {
           justifyContent: 'center',
         }}
       >
-        <Card.Title as='div'>
-          <Card.Text as='span' className='float-left'>
-            <a
-              href={project.link}
-              target='_blank'
-              rel='noreferrer'
-              className='anchor'
-            >
+        <a
+          href={project.link}
+          target='_blank'
+          rel='noreferrer'
+          className='anchor'
+        >
+          <Card.Title as='div'>
+            <Card.Text as='span' className='float-left'>
               {project.name}
-            </a>
-          </Card.Text>
-          <Card.Text
-            as='span'
-            className='float-right'
+            </Card.Text>
+            <Card.Text
+              as='span'
+              className='float-right'
+              style={{
+                color: '#5d6475',
+              }}
+            >
+              {project.language}
+              <FontAwesomeIcon
+                style={{
+                  marginLeft: '1ch',
+                  marginRight: '0.2ch',
+                }}
+                icon={faStar}
+              />
+              {project.stars}
+            </Card.Text>
+          </Card.Title>
+          <Card.Body
+            className='pl-0 mb-0 pb-0'
             style={{
-              color: '#5d6475',
+              fontSize: 'small',
             }}
           >
-            {project.language}
-            <FontAwesomeIcon
-              style={{
-                marginLeft: '1ch',
-                marginRight: '0.2ch',
-              }}
-              icon={faStar}
-            />
-            {project.stars}
-          </Card.Text>
-        </Card.Title>
-        <Card.Body className='pl-0 mb-0 pb-0'>{project.description}</Card.Body>
+            {project.description}
+          </Card.Body>
+        </a>
       </Card>
     </div>
   );
